@@ -34,7 +34,6 @@ header {
         margin: 0;
     }
     
-    
 }
 nav a {
     color: #fff;
@@ -52,6 +51,37 @@ section {
     margin: auto;
     position: relative;
 }
+
+/* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    background: url('img/pexels-brunogobofoto-2204179.jpg') center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+/* Hero Text */
+.hero-text {
+    background: rgba(0, 0, 0, 0.5); /* Optional overlay */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+
 h2 {
     color: #004e92;
     margin-bottom: 20px;
@@ -99,11 +129,21 @@ footer {
     background: #000428;
     color: white;
 }
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Fix 3 kolom */
     gap: 20px;
 }
+
+/* Responsive di HP */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
 .carousel {
     position: relative;
     width: 100%;
